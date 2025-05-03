@@ -9,7 +9,7 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined
     : process.env.DATABASE_URL;
 module.exports = { session: process.env.SESSION_ID || 'ezra',
     PREFIXE: process.env.PREFIX || "+",
-    GITHUB : process.env.GITHUB|| 'https://github.com/Fred1e/LUCKY_MD',
+    GITHUB : process.env.GITHUB|| 'https://github.com/mr-X-force/LUCKY-MD-XFORCE',
     OWNER_NAME : process.env.OWNER_NAME || "Fredi",
     NUMERO_OWNER : process.env.NUMERO_OWNER || "255752593977",  
               
@@ -17,23 +17,24 @@ module.exports = { session: process.env.SESSION_ID || 'ezra',
     AUTO_DOWNLOAD_STATUS: process.env.AUTO_DOWNLOAD_STATUS || 'non',
     AUTO_REACT: process.env.AUTO_REACTION || "non",  
      AUTO_SAVE_CONTACTS : process.env.AUTO_SAVE_CONTACTS || 'no',
-    URL: process.env.URL || "https://files.catbox.moe/7irwqn.jpeg",  
+    URL: process.env.URL || "https://files.catbox.moe/uw4l17.jpeg",  
+    URL2: process.env.URL2 || "https://files.catbox.moe/3o37c5.jpeg",
     AUTO_REACT_STATUS: process.env.AUTO_REACT_STATUS || 'non',              
     CHAT_BOT: process.env.CHAT_BOT || "off",              
     AUTO_READ_MESSAGES: process.env.AUTO_READ_MESSAGES || "yes",
     AUTO_BLOCK: process.env.AUTO_BLOCK || 'no', 
     GCF: process.env.GROUP_HANDLE || 'no', 
     AUTO_REPLY : process.env.AUTO_REPLY || "no", 
-    AUTO_STATUS_TEXT: process.env.AUTO_STATUS_TEXT || 'viewed by alpha md',   
+    AUTO_STATUS_TEXT: process.env.AUTO_STATUS_TEXT || 'Your Status Seen By ☢️LUCKY-MD-XFORCE☢️',   
     AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || 'no',
     AUTO_BIO: process.env.AUTO_BIO || 'yes',       
     ANTI_CALL_TEXT : process.env.ANTI_CALL_TEXT || '',             
     GURL: process.env.GURL  || "https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f",
     WEBSITE :process.env.GURL || "https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f",
-    CAPTION : process.env.CAPTION || "✧⁠LUCKY_MD✧",
-    BOT : process.env.BOT_NAME || '✧⁠LUCKY_MD✧⁠',
+    CAPTION : process.env.CAPTION || "☢️LUCKY-MD-XFORCE☢️",
+    BOT : process.env.BOT_NAME || '☢️LUCKY-MD-XFORCE☢️⁠',
     MODE: process.env.PUBLIC_MODE || "no",              
-    TIMEZONE: process.env.TIMEZONE || "Africa/Dodoma", 
+    TIMEZONE: process.env.TIMEZONE || "Africa/Dar_Es_Salam", 
     PM_PERMIT: process.env.PM_PERMIT || 'no',
     HEROKU_APP_NAME : process.env.HEROKU_APP_NAME || null,
     HEROKU_API_KEY : process.env.HEROKU_API_KEY || null,
@@ -69,4 +70,3 @@ fs.watchFile(fichier, () => {
     delete require.cache[fichier];
     require(fichier);
 });
-

@@ -1,20 +1,20 @@
 {
-  "name": "✧⁠LUCKY_MD✧ MULT DEVICE",
-  "description": "Lucky Whatsapp device bot made by FrediEzra to help Whatsapp users to enjoy while helping..",
+  "name": "☢️LUCKY-MD-XFORCE☢️ MULT DEVICE",
+  "description": "☢️LUCKY-MD-⁠XFORCE☢️ Whatsapp device bot made by FrediEzra to help Whatsapp users to enjoy while helping...",
   "keywords": [
     "bot",
     "node",
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://files.catbox.moe/7irwqn.jpeg",
-  "repository": "https://github.com/Fred1e/LUCKY_MD",
+  "logo": "https://files.catbox.moe/uw4l17.jpeg",
+  "repository": "https://github.com/mr-X-force/LUCKY-MD-XFORCE",
   "succes_url": "/",
   "stack": "container",
   "env": {
     "PREFIX": {
       "description": "Choose your bot's prefix",
-      "value": ".",
+      "value": "~",
       "required": true
     },
     "AUTO_READ_STATUS": {
@@ -61,7 +61,7 @@
     },
     "AUTO_STATUS_TEXT": {
       "description": "type your genuine status message",
-      "value": "viewed ✅✅",
+      "value": "💲YOUR STATUS VIEWED BY ☢️LUCKY-MD-⁠XFORCE☢️ SUCCESSFUL 😇✅✅",
       "required": false
     },
     "AUTO_STATUS_REPLY": {
@@ -71,13 +71,18 @@
     },
     "ANTI_CALL_TEXT": {
       "description": "Type your anticall message to always send when calls are declined.You can as well leave it blank",
-      "value": "My owner don't receive any call now because it's busy",
+      "value": "",
       "required": false
     },
     "BOT_NAME": {
       "description": "you must give a name for you bot uhh??!!",
-      "value": "✧⁠LUCKY_MD✧",
+      "value": "☢️LUCKY-MD-XFORCE☢️",
       "required": false 
+    },
+    "CHAT_BOT": {
+      "description": "urs if you want bot to chat automatic",
+      "value": "yes",
+      "required": false
     },
     "PUBLIC_MODE": {
       "description": "Set 'yes' to make your bot public or 'no' to keep it private",
@@ -106,12 +111,17 @@
     },
     "URL": {
       "description": "you must add your bot image url.Get your image url now and fill it here",
-      "value": "https://files.catbox.moe/7irwqn.jpeg",
+      "value": "https://files.catbox.moe/3o37c5.jpeg",
+      "required": true
+    },
+    "URL2": {
+      "description": "you must add your bot image url.Get your image url now and fill it here",
+      "value": "https://files.catbox.moe/uw4l17.jpeg",
       "required": true
     },
     "AUTO_READ_MESSAGES": {
       "description": "yes toactivate no to deactivate",
-      "value": "no",
+      "value": "yes",
       "required": false  
     },
     "NUMERO_OWNER": {
@@ -126,7 +136,7 @@
     },
     "STARTING_BOT_MESSAGE": {
       "description": "Set 'yes' to display a starting bot message or 'no' to disable it",
-      "value": "no",
+      "value": "yes",
       "required": true
     },
     "PRESENCE": {

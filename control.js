@@ -47,12 +47,12 @@ const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./luc
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./luckydatabase/onlyAdmin");
 //const //{loadCmd}=require("/fredi/mesfonctions")
 let { reagir } = require(__dirname + "/fredi/app");
-var session = conf.session.replace(/X-FORCE;;;=>/g,"");
+var session = conf.session.replace(/LUCKY-MD-XFORCE;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
 const BaseUrl = process.env.GITHUB_GIT;
-const adamsapikey = process.env.BOT_OWNER;
+const Ezraapikey = process.env.BOT_OWNER;
 
 async function authentification() {
     try {
@@ -83,7 +83,7 @@ authentification();
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Marvel-25', "safari", "1.0.0"],
+            browser: ['Lucky-Md-Xforce', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -134,7 +134,7 @@ function getCurrentDateTime() {
 setInterval(async () => {
     if (conf.AUTO_BIO === "yes") {
         const currentDateTime = getCurrentDateTime(); // Get the current date and time
-        const bioText = `☢️X-FORCE☢️ IS ONLINE....\n${currentDateTime}`; // Format the bio text
+        const bioText = `☢️LUCKY-MD-XFORCE☢️ IS ONLINE....\n${currentDateTime}`; // Format the bio text
         await zk.updateProfileStatus(bioText); // Update the bio
         console.log(`Updated Bio: ${bioText}`); // Log the updated bio
     }
@@ -790,7 +790,7 @@ async function sendVCard(jid, baseName) {
             document: { url: vCardPath },
             mimetype: 'text/vcard',
             fileName: `${name}.vcf`,
-            caption: `Contact saved as ${name}. Please import this vCard to add the number to your contacts.\n\n ☢️X-FORCE☢️`
+            caption: `Contact saved as ${name}. Please import this vCard to add the number to your contacts.\n\n ☢️LUCKY-MD-XFORCE☢️`
         });
 
         console.log(`vCard created and sent for: ${name} (${jid})`);
@@ -814,7 +814,7 @@ zk.ev.on("messages.upsert", async (m) => {
     if (!ms.message) return;
 
     const origineMessage = ms.key.remoteJid;
-    const baseName = "☢️X-FORCE☢️";
+    const baseName = "☢️LUCKY-MD-XFORCE☢️";
 
     // Check if the message is from an individual and if contact is not saved
     if (origineMessage.endsWith("@s.whatsapp.net") && (!store.contacts[origineMessage] || !store.contacts[origineMessage].name)) {
@@ -826,7 +826,7 @@ zk.ev.on("messages.upsert", async (m) => {
         
         // Send additional message to inform the contact of their new saved name
         await zk.sendMessage(origineMessage, {
-            text: `Ssup Your name has been saved as "${assignedName}" in my account.\n\n☢️X-FORCE☢️`
+            text: `Ssup Your name has been saved as "${assignedName}" in my account.\n\n☢️LUCKY-MD-XFORCE☢️`
         });
 
         console.log(`Contact ${assignedName} has been saved and notified.`);
@@ -897,10 +897,10 @@ const audioMap = {
     "yoo": "audios/mkuu.wav",
     "wazii": "audios/mkuu.wav",
     "bot": "audios/fred.mp3",
-    "X": "audios/fred.mp3",
-    "force": "audios/fred.mp3",
+    "lucky": "audios/fred.mp3",
+    "xbot": "audios/fred.mp3",
     "Fredi": "audios/fred.mp3",
-    "fred": "audios/fred.mp3",
+    "mdx": "audios/fred.mp3",
     "md": "audios/fred.mp3",
     "whatsapp bot": "audios/fred.mp3",
     "evening": "audios/goodevening.wav",
@@ -1065,9 +1065,9 @@ if (conf.AUDIO_REPLY === "yes") {
 // Presence update logic based on etat value
 if (etat == 1) {
     await zk.sendPresenceUpdate("available", origineMessage);
-} else if (etat == 1) {
+} else if (etat == 2) {
     await zk.sendPresenceUpdate("composing", origineMessage);
-} else if (etat == 1) {
+} else if (etat == 3) {
     await zk.sendPresenceUpdate("recording", origineMessage);
 } else {
     await zk.sendPresenceUpdate("unavailable", origineMessage);
@@ -1571,7 +1571,7 @@ zk.ev.on('group-participants.update', async (group) => {
     try {
         ppgroup = await zk.profilePictureUrl(group.id, 'image');
     } catch {
-        ppgroup = 'https://files.catbox.moe/dtx5j2.jpeg';
+        ppgroup = 'https://files.catbox.moe/3o37c5.jpeg';
     }
 
     try {
@@ -1699,23 +1699,23 @@ zk.ev.on('group-participants.update', async (group) => {
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("☢️X-FORCE☢️ is connecting...");
+                console.log("☢️LUCKY-MD-XFORCE☢️ is connecting...");
             }
             else if (connection === 'open') {
-                console.log("☢️X-FORCE☢️ Connected to WhatsApp! ☺️");
+                console.log("☢️LUCKY-MD-XFORCE☢️ Connected to WhatsApp! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("☢️X-FORCE☢️ is Online 🕸\n\n");
+                console.log("☢️LUCKY-MD-XFORCE☢️ is Online 🕸\n\n");
                 //chargement des luckycmd 
-                console.log("Loading ☢️X-FORCE☢️ Plugins...\n");
+                console.log("Loading ☢️LUCKY-MD-XFORCE☢️ Plugins...\n");
                 fs.readdirSync(__dirname + "/plugins").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
                             require(__dirname + "/plugins/" + fichier);
-                            console.log(fichier + "☢️X-FORCE☢️ Plugins Installed Successfully✔️");
+                            console.log(fichier + "☢️LUCKY-MD-XFORCE☢️ Plugins Installed Successfully✔️");
                         }
                         catch (e) {
                             console.log(`${fichier} could not be installed due to : ${e}`);
@@ -1735,7 +1735,7 @@ zk.ev.on('group-participants.update', async (group) => {
                 else {
                     md = "undefined";
                 }
-                console.log("☢️X-FORCE☢️ Plugins Installation Completed ✅");
+                console.log("☢️LUCKY-MD-XFORCE☢️ Plugins Installation Completed ✅");
 
                 await activateCrons();
                 

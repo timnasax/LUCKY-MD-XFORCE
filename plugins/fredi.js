@@ -57,28 +57,28 @@ ezra({
     const imgs = 'https://files.catbox.moe/5x1y2z.png';
 
     const infoMsg = `
-╭───────────━⊷
-*┋* *ʙᴏᴛ ɴᴀᴍᴇ :  LUCKY MD X-FORCE*
+╭┈┈┈┈━⊷
+*┋* *ʙᴏᴛ ɴᴀᴍᴇ :  ☢️LUCKY MD X-FORCE☢️*
 *┋* *ᴘʀᴇғɪx :* [ ${s.PREFIXE} ]
 *┋* *ᴍᴏᴅᴇ :* ${mode}
 *┋* *ᴅᴀᴛᴇ  :* ${date}
 *┋* *ᴘʟᴀᴛғᴏʀᴍ :* ${os.platform()}
 *┋* *ᴏᴡɴᴇʀ ɪs : FREDI*
 *┋* *ᴘʟᴜɢɪɴs ᴄᴍᴅ :* ${cm.length}
-╰───────────━⊷\n`;
+╰┈┈┈┈━⊷\n`;
     
     let menuMsg = ` *${greeting}*`;
     
     for (const cat in coms) {
         menuMsg += `
 *「 ${toFancyUppercaseFont(cat)} 」*
-╭───────────━⊷ `;
+╭─━⊷ `;
         for (const cmd of coms[cat]) {
             menuMsg += `          
 *┋* ${toFancyLowercaseFont(cmd)}`;   
         }
         menuMsg += `
-╰───────────━⊷`;
+╰─━⊷`;
     }
     
     menuMsg += `
@@ -98,7 +98,7 @@ ezra({
                 forwardingScore: 999,
                 externalAdReply: {
                     title: "☢️LUCKY MD X-FORCE☢️",
-                    body: "🧃Command List",
+                    body: "🗡️Command List",
                     thumbnailUrl: imgs,
                     sourceUrl: "https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f",
                     mediaType: 1,
