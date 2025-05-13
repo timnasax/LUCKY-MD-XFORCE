@@ -71,27 +71,17 @@ ezra({
      ┋  *Owner:*   *${conf.OWNER_NAME}*
      ╰┈┈┈┈┈┈`;
 
-        await zk.sendMessage(dest, { 
-            image: { url: "https://files.catbox.moe/uw4l17.jpeg" },
-            caption: message,
-            contextInfo: {
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: "120363313124070136@newsletter",
-                    newsletterName: "@FrediEzra",
-                    serverMessageId: -1
-                },
-                forwardingScore: 999,
-                externalAdReply: {
-                    title: "☢️LUCKY MD X-FORCE☢️",
-                    body: "🗡️Repo Info List",
-                    thumbnailUrl: "https://files.catbox.moe/3o37c5.jpeg",
-                    sourceUrl: "https://whatsapp.com/channel/0029VaihcQv84Om8LP59fO3f",
-                    mediaType: 1,
-                    renderLargerThumbnail: true
-                }
-            }
-        });
+        //Context to read forwarded info
+    const getContextInfo = (title = '', userJid = '') => ({
+    mentionedJid: [userJid],
+    forwardingScore: 999,
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: "120363313124070136@newsletter",
+      newsletterName: "@FrediEzra",
+      serverMessageId: Math.floor(100000 + Math.random() * 900000),
+    },
+  });
         } else {
             console.log("Could not fetch data");
             repondre("An error occurred while fetching the repository data.");
