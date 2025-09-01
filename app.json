@@ -1,6 +1,6 @@
 {
-  "name": "☢️LUCKY-MD-XFORCE☢️ MULT DEVICE",
-  "description": "☢️LUCKY-MD-⁠XFORCE☢️ Whatsapp device bot made by FrediEzra to help Whatsapp users to enjoy while helping...",
+  "name": "💦LUCKY-MD-XFORCE💨 MULTI DEVICE",
+  "description": "💦LUCKY-MD-⁠XFORCE💨 Whatsapp device bot made by FrediEzra Tech Info to help Whatsapp users to enjoy while helping...",
   "keywords": [
     "bot",
     "node",
@@ -14,7 +14,7 @@
   "env": {
     "PREFIX": {
       "description": "Choose your bot's prefix",
-      "value": "~",
+      "value": ".",
       "required": true
     },
     "AUTO_READ_STATUS": {
@@ -29,7 +29,22 @@
       "required":false
     },
     "AUTO_REPLY": {
-      "description": "when enabled it automatically sends  auto reply message to members in your pm",
+      "description": "when enabled it automatically sends  auto reply message in your chats for mentioned words",
+      "value": "no",
+      "required": false
+    },
+    "GREET_MESSAGE": {
+      "description": "when enabled it automatically sends greeting message in your chats",
+      "value": "no",
+      "required": false
+    },
+    "ANTI_BAD": {
+      "description": "when enabled it bot was detect bad words and delete",
+      "value": "no",
+      "required": false
+    },
+    "ANTI_BUG": {
+      "description": "when you enable anti bug 🐛 bot is detect bugs text and delete",
       "value": "no",
       "required": false
     },
@@ -43,11 +58,15 @@
       "value": "yes",
       "required": false
     },
-      "AUTO_SAVE_CONTACTS":
-    {
+    "AUTO_SAVE_CONTACTS": {
       "description":"Enter yes for your bot to auto save contacts",
       "value":"no",
       "required":false
+    },
+    "AUTO_STICKER": {
+      "description": "when enabled it autosicker you allow bot to send sticker automatic with detected words",
+      "value": "no",
+      "required": false
     },
     "AUTO_DOWNLOAD_STATUS": {
       "description": "Your contact status will be downloaded automatically and sent to you (type 'yes' to activate or 'no' to deactivate; don't write in capital letters)",
@@ -61,7 +80,7 @@
     },
     "AUTO_STATUS_TEXT": {
       "description": "type your genuine status message",
-      "value": "💲YOUR STATUS VIEWED BY ☢️LUCKY-MD-⁠XFORCE☢️ SUCCESSFUL 😇✅✅",
+      "value": "💲YOUR STATUS VIEWED BY 💦LUCKY-MD-⁠XFORCE💨 SUCCESSFUL 😇✅✅",
       "required": false
     },
     "AUTO_STATUS_REPLY": {
@@ -69,19 +88,9 @@
       "value": "no",
       "required": false
     },
-    "ANTI_CALL_TEXT": {
-      "description": "Type your anticall message to always send when calls are declined.You can as well leave it blank",
-      "value": "",
-      "required": false
-    },
-    "BOT_NAME": {
-      "description": "you must give a name for you bot uhh??!!",
-      "value": "☢️LUCKY-MD-XFORCE☢️",
-      "required": false 
-    },
     "CHAT_BOT": {
-      "description": "urs if you want bot to chat automatic",
-      "value": "yes",
+      "description": "urs if you want bot to chat automatic in inbox",
+      "value": "no",
       "required": false
     },
     "PUBLIC_MODE": {
@@ -109,29 +118,14 @@
       "value": "FrediEzra",
       "required": false
     },
-    "URL": {
-      "description": "you must add your bot image url.Get your image url now and fill it here",
-      "value": "https://files.catbox.moe/3o37c5.jpeg",
-      "required": true
-    },
-    "URL2": {
-      "description": "you must add your bot image url.Get your image url now and fill it here",
-      "value": "https://files.catbox.moe/uw4l17.jpeg",
-      "required": true
-    },
     "AUTO_READ_MESSAGES": {
       "description": "yes toactivate no to deactivate",
-      "value": "yes",
+      "value": "no",
       "required": false  
     },
     "NUMERO_OWNER": {
       "description": "Your phone number (exclude '+' and area code, e.g., '255752593977')",
       "value": "255752593977",
-      "required": false
-    },
-    "WARN_COUNT": {
-      "description": "Set the warning limit for warning commands",
-      "value": "5",
       "required": false
     },
     "STARTING_BOT_MESSAGE": {
@@ -144,8 +138,8 @@
       "value": "1",
       "required": false
     },
-    "ANTI_DELETE_MESSAGE": {
-      "description": "Enable anti-delete message (set 'yes' to activate or 'no' to deactivate)",
+    "ANTI_DELETE_MESSAGES": {
+      "description": "Enable anti-delete message in dm's (set 'yes' to activate or 'no' to deactivate)",
       "value": "no",
       "required": false
     },
@@ -164,16 +158,28 @@
       "value": "no",
       "required": false
     }
-  },
+    },
+
   "formation": {
+
     "worker": {
+
       "quantity": 1,
+
       "size": "standard-2x"
+
     }
+
   },
+
   "addons": [
+
     {
+
       "plan": "heroku-postgresql:essential-0"
+
     }
+
   ]
+
 }
